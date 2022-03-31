@@ -64,6 +64,10 @@
 
         &__item {
             padding: 0;
+
+            &--icons {
+                opacity: 0;
+            }
         }
     
         &__item--title-back,
@@ -93,7 +97,7 @@
         text-align: left;
 
         &-container {
-            width: 85%;
+            width: 90%;
             margin: 0 auto;
             flex-direction: row;
             align-items: flex-start;
@@ -102,6 +106,7 @@
 
         &__logo {
             order: 0;
+            margin-left: 5.1em;
         }
     }
 
@@ -114,9 +119,13 @@
         width: 200px;
     }
 
+    .theme {
+        left: 2em;
+    }
+
     .moon,
     .sun {
-        left: 2em;
+        // left: 2em;
         font-size: 1.5rem;
     }
 }

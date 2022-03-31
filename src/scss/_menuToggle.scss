@@ -8,6 +8,7 @@
     right: 2em;
     
     .menu-text {
+        color: var(--clr-secondary);
         font-size: .7rem;
     }
 
@@ -24,7 +25,7 @@
 
         & span {
             position: absolute;
-            background: $clr__primary-dark;
+            background: var(--clr-secondary);
             width: 25px;
             height: 3px;
             border-radius: 1rem;

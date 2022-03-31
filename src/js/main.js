@@ -93,23 +93,6 @@ window.addEventListener('scroll', function() {
     }
 })
 
-
-// function navAppearence() {
-//     let header = document.querySelector('.nav');
-//     let headerPosition = header.getBoundingClientRect().top;
-
-//     let screenPosition = window.innerHeight / 2;
-
-//     if ( headerPosition < screenPosition ) {
-//         header.classList.add('header-dissappear');
-//     } else {
-//         header.classList.remove('header-dissappear');
-//     }
-
-// }
-
-// window.addEventListener('scroll', navAppearence);
-
 // ===================================
 // ===================================
 // ===================================
@@ -124,14 +107,6 @@ window.addEventListener('mousemove', cursor);
 
 // mouse cursor behavoir 
 
-// mainTitle.addEventListener('mouseover', () => {
-//     mouseCursor.classList.add('cursor-grow');
-// })
-
-// mainTitle.addEventListener('mouseleave', () => {
-//     mouseCursor.classList.remove('cursor-grow');
-// })
-
 themeButtons.forEach(function(e) {
     e.addEventListener('mouseover', () => {
         mouseCursor.classList.add('cursor-grow--second');
@@ -142,13 +117,6 @@ themeButtons.forEach(function(e) {
     });
 })
 
-// navLogo.addEventListener('mouseover', () => {
-//     mouseCursor.classList.add('cursor-grow');
-// })
-
-// navLogo.addEventListener('mouseleave', () => {
-//     mouseCursor.classList.remove('cursor-grow');
-// })
 
 let workIconsButtons = workIcons.length
 
@@ -251,71 +219,95 @@ function parallaxPhoto (e) {
         let moveSpeed = move.getAttribute('data-speed');
         let x = e.clientX * (moveSpeed / 100);
         let y = e.clientY * moveSpeed;
-
+        
         move.style.transform = `translateX(${-x * 3}px)`;
     });
 }
 
-
-
 // CHANGE THE THEME WHEN CLICKED BUTTONS SUN & MOON
-// Add the dark theme 
-const moonButton = document.querySelector('.moon');
+// Local storage for dark theme
+let darkMode = localStorage.getItem('dark-mode');
+const themeBtn = document.querySelector('.theme');
 
-moonButton.addEventListener('click', changeThemeToDark);
-
-function changeThemeToDark() {
+const enableDarkMode = () => {
     let sun = document.querySelector('.sun');
     let moon = document.querySelector('.moon');
-    let main = document.querySelector('.main');
-    let about = document.querySelector('.about');
-    let works = document.querySelector('.works');
-    let footer = document.querySelector('.footer');
-    let headingBox = document.querySelector('.box');
-    let header = document.querySelector('.header');
-    let cursor = document.querySelector('.cursor');
     let upArrow = document.querySelector('.up-arrow');
 
-    main.classList.add('main-dark');
-    about.classList.add('about-dark');
-    works.classList.add('works-dark');
-    footer.classList.add('footer-dark');
-    header.classList.add('header-dark');
-    cursor.classList.add('cursor-dark');
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('dark-mode', 'enabled');
+
     upArrow.classList.add('up-arrow-dark');
-    headingBox.style.background = 'black';
     sun.style.opacity = '1';
-    moon.style.opacity = '0';    
+    moon.style.opacity = '0';  
     moon.style.transform = `translateX(-50px)`;    
 
 }
 
-// Remove the dark theme
-const sunButton = document.querySelector('.sun');
-
-sunButton.addEventListener('click', changeThemeToLight);
-
-function changeThemeToLight() {
+const disableDarkMode = () => {
     let sun = document.querySelector('.sun');
     let moon = document.querySelector('.moon');
-    let main = document.querySelector('.main');
-    let about = document.querySelector('.about');
-    let works = document.querySelector('.works');
-    let headingBox = document.querySelector('.box');
-    let header = document.querySelector('.header');
-    let cursor = document.querySelector('.cursor');
     let upArrow = document.querySelector('.up-arrow');
 
-    main.classList.remove('main-dark');
-    about.classList.remove('about-dark');
-    works.classList.remove('works-dark');
-    header.classList.remove('header-dark');
-    cursor.classList.remove('cursor-dark');
+    document.body.classList.remove('dark-mode');
+    localStorage.setItem('dark-mode', null);
+    
     upArrow.classList.remove('up-arrow-dark');
-    headingBox.style.background = 'white';
     moon.style.opacity = '1';
     sun.style.opacity = '0';
-    moon.style.transform = `translateX(0)`;   
-
+    moon.style.transform = `translateX(0)`;  
 }
 
+if ( darkMode === 'enabled') {
+    enableDarkMode();
+}
+
+themeBtn.addEventListener('click', () => {
+    darkMode = localStorage.getItem('dark-mode');
+
+    if ( darkMode !== 'enabled') {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+})
+
+
+// Add the dark theme 
+// const moonButton = document.querySelector('.moon');
+
+// moonButton.addEventListener('click', changeThemeToDark);
+
+// function changeThemeToDark() {
+
+    // let sun = document.querySelector('.sun');
+    // let moon = document.querySelector('.moon');
+    // let upArrow = document.querySelector('.up-arrow');
+    
+    // upArrow.classList.add('up-arrow-dark');
+//     document.querySelector('body').classList.add('dark-mode');
+//     sun.style.opacity = '1';
+//     moon.style.opacity = '0';    
+//     moon.style.transform = `translateX(-50px)`;    
+
+// }
+
+// // Remove the dark theme
+// const sunButton = document.querySelector('.sun');
+
+// sunButton.addEventListener('click', changeThemeToLight);
+
+// function changeThemeToLight() {
+//     let sun = document.querySelector('.sun');
+//     let moon = document.querySelector('.moon');
+//     let upArrow = document.querySelector('.up-arrow');
+
+//     upArrow.classList.remove('up-arrow-dark');
+//     document.querySelector('body').classList.remove('dark-mode')
+    // moon.style.opacity = '1';
+    // sun.style.opacity = '0';
+    // moon.style.transform = `translateX(0)`;   
+
+// }
+
+// localStorage.clear()

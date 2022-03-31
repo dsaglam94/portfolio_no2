@@ -1,19 +1,10 @@
 .footer {
     padding-inline: 2em;
     padding-bottom: 2em;
-    background-color: $clr__primary-white;
-    color: $clr__primary-dark;
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
     text-align: center;
     transition: background, color, .5s ease;
-
-    &.footer-dark {
-        background-color: $clr__primary-dark;
-        color: $clr__primary-white;
-    }
-    
-    &.footer-dark a{
-        color: $clr__primary-white;
-    }
 
     &-container {
         width: 100%;
@@ -25,14 +16,14 @@
     &__left {
         &--para {
             font-size: .7rem;
-            font-weight: 700;
+            font-weight: 500;
         }
 
         &--mail {
             text-decoration: none;
-            color: $clr__primary-dark;
+            color: var(--clr-secondary);
             font-size: .8rem;
-            font-weight: 700;
+            font-weight: 500;
         }
     }
 
@@ -49,7 +40,7 @@
 
             & a {
                 text-decoration: none;
-                color: $clr__primary-dark;
+                color: var(--clr-secondary);
                 font-weight: 600;
                 font-size: .8rem;
 
@@ -60,7 +51,7 @@
         }
 
         &--copyright {
-            font-size: .7rem;
+            font-size: .6rem;
             margin-top: 1em;
             opacity: .7;
         }

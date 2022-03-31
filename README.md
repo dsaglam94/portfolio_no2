@@ -5,7 +5,7 @@
 - Normally I wasn't gonna make the source code public but I want to hear opinions and recommendations to improve my skills and refactor my code if it's necessary.
 
 
-Tech stack used in this project:
+>Tech stack used in this project:
 
 - SASS 
 - HTML5
@@ -17,9 +17,14 @@ It's not finished yet. But so far:
 - Removed the unnecessary hover effects on mobile devices
 - Improved the accesibilty
 
+> March 31 - 2022 
+- Added Localstorage for the theme
+- Refactored JS codes
+
+
 Todos:
 
-- Add localStorage for theme
+- Add localStorage for theme ✅
 - Add other pages
 - Add my projects
 - Create a loading screen for page transitions and opening

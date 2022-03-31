@@ -12,7 +12,7 @@
     transition: opacity 1s ease;
 
     & .text {
-        color: $clr__primary-dark;
+        color: var(--clr-secondary);
         position: absolute;
         width: 100%;
         height: 100%;
@@ -48,7 +48,7 @@
     position: fixed;
     width: 15px;
     height: 15px;
-    border: 1px solid #000;
+    border: 1px solid var(--clr-secondary);
     background-color: transparent;
     border-radius: 50%;
     pointer-events: none;
@@ -64,7 +64,7 @@
 }
 
 .cursor-grow {
-    background-color: #fff;
+    background-color: var(--clr-cursor-bg);
     border: none;
     mix-blend-mode: difference;
     transform: scale(6);
@@ -72,7 +72,7 @@
 }
 
 .cursor-grow--second {
-    background-color: #fff;
+    background-color: var(--clr-cursor-bg);
     border: none;
     mix-blend-mode: difference;
     transform: scale(3);
@@ -86,36 +86,46 @@
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     width: 120px;
     height: 300px;
-    background-color: $clr__primary-white;
+    background-color: var(--clr-primary);
     z-index: 2;
     transition: background .5s ease;
     margin-bottom: 2em;
 }
 // theme changer
+
 .theme {
+    background-color: transparent;
+    display: grid;
+    place-items: center;
     position: absolute;
-    bottom: 90px;
+    bottom: 50px;
     left: 1em;
+    outline: none;
+    border: none;
     transition: transform, opacity, 1s ease;
+    padding: 1em;
     opacity: 1;
+
+    &:focus {
+        outline: 1px solid var(--clr-secondary);
+        border-radius: 1rem;
+    }
 }
 
 .moon,
 .sun {
-    position: absolute;
-    border: 0;
     background-color: transparent;
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    cursor: none;
 }
 
 .moon {
-    color: $clr__primary-dark;
+    color: var(--clr-secondary);
     opacity: 1;
 }
 
 .sun {
-    color: $clr__primary-white;
+    color: var(--clr-secondary);
     opacity: 0;
 }
 
@@ -124,17 +134,12 @@
     transform: translateY(100px);
 }
 
-// ACTIVE LINK FOR NAVLINKS
-.active-link {
-    -webkit-text-stroke: 2px red;
-}
-
 // Works 
 
 .works-divider {
     height: 3px;
     width: 50px;
-    background-color: $clr__primary-dark;
+    background-color: var(--clr-secondary);
     margin-bottom: 3em;
 }
 

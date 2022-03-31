@@ -5,8 +5,8 @@
     }
 
     .works__bottom-text:hover {
-        color: $clr__primary-dark;
-        -webkit-text-stroke: 0px $clr__primary-dark;
+        color: var(--clr-secondary);
+        -webkit-text-stroke: 0px;
     }
 
     .works__item:hover > .works__item--icons {
@@ -14,7 +14,7 @@
     }
 
     .works-dark .works__bottom-text:hover {
-        color: $clr__primary-white;
+        color: var(--clr-primary);
         -webkit-text-stroke: 0px;
     }
 

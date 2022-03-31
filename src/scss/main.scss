@@ -54,6 +54,18 @@ h1, h2, h3, h4 {
 a {
     cursor: none;
 }
+// For the theme
+
+:root {
+    --clr-primary: #fff;
+    --clr-secondary: #000;
+    --clr-cursor-bg: #fff;
+}
+
+.dark-mode {
+    --clr-primary: #000;
+    --clr-secondary: #fff;
+}
 
 .main {
     width: 100%;
@@ -62,28 +74,8 @@ a {
     display: grid;
     place-items: center;
     text-align: center;
-    background-color: $clr__primary-white;
+    background-color: var(--clr-primary);
     transition: background, color, .5s ease;
-
-    &.main-dark {
-        background-color: $clr__primary-dark;
-    }
-
-    &.main-dark .main__title--front {
-        -webkit-text-stroke: 1.5px $clr__primary-white;
-    }
-
-    &.main-dark .main__title--back {
-        color: $clr__primary-white;
-    }
-
-    &.main-dark .main__social-links a{
-        color: $clr__primary-white;
-    }
-    
-    &.main-dark .text{
-        color: $clr__primary-white;
-    }
 
 
     & .container {
@@ -92,6 +84,7 @@ a {
         display: grid;
         place-items: center;
         position: relative;
+        z-index: 1;
     }
 
     &__title--front {
@@ -102,7 +95,7 @@ a {
         line-height: 1;
         color: transparent;
         letter-spacing: 3px;
-        -webkit-text-stroke: 1.5px $clr__primary-dark;
+        -webkit-text-stroke: 1.5px var(--clr-secondary);
         z-index: 3;
         margin-bottom: 2em;
     }
@@ -113,7 +106,7 @@ a {
         font-size: 2rem;
         font-weight: 900;
         line-height: 1;
-        color: $clr__primary-dark;
+        color: var(--clr-secondary);
         letter-spacing: 3px;
         z-index: 1;
         margin-bottom: 2em;
@@ -134,7 +127,7 @@ a {
 
 
         & a {
-            color: $clr__primary-dark;
+            color: var(--clr-secondary);
             font-size: 1.5rem;
             margin-left: 1em;
             cursor: none;

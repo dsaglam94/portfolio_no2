@@ -6,12 +6,13 @@
     }
 }
 
+// Custom cursor doesn't interrupt user interface
 @mixin mobile-only {
     @media (pointer: coarse) {
         @content;
     }
 }
-
+// Hover effects work only for desktops
 @mixin hover-desktop {
     @media (hover: hover) and (pointer: fine) {
         @content;
