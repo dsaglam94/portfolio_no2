@@ -80,6 +80,7 @@
             }
 
             & i {
+                color: var(--clr-secondary);
                 animation: leftpointer 2s linear infinite;
 
                 @keyframes leftpointer {

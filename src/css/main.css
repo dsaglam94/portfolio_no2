@@ -342,6 +342,7 @@
   margin-right: 3em;
 }
 .about__text--container .about--button i {
+  color: var(--clr-secondary);
   animation: leftpointer 2s linear infinite;
 }
 @keyframes leftpointer {
