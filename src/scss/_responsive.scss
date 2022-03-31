@@ -1,0 +1,129 @@
+@include media-md {
+
+    .header {
+
+        .nav {
+
+            &__logo {
+                left: 4em;
+            }
+        }
+
+        .menu-container {
+            right: 4em;
+        }
+    }
+
+    .main {
+
+        &__title--front,
+        &__title--back {
+            font-size: 3rem;
+        }
+
+        .span-title {
+            display: block;
+            margin-top: 1em;
+        }
+
+        &__social--links {
+            display: block;
+            right: 3em;
+            bottom: 45px;
+        }
+    }
+
+    // About Section
+    .about {
+        flex-direction: row;
+        justify-content: center;
+
+        &__title--back,
+        &__title--front {
+            font-size: 6rem;
+        }
+
+        &__image--container {
+            order: 1;
+        }
+
+        &__text--container {
+            position: relative;
+            left: 70px;
+            padding-left: 2em;
+            padding-right: 0;
+        }
+
+        .about--button {
+            margin-bottom: 0;
+        }
+    }
+
+    // Works section
+    .works {
+
+        &__item {
+            padding: 0;
+        }
+    
+        &__item--title-back,
+        &__item--title-front {
+            bottom: 0;
+        }
+    
+        &__grid-container {
+            width: 900px;
+            max-width: 80%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        &__view-text {
+            margin-top: 2em;
+        }
+
+        &__bottom-text {
+            margin-bottom: 2em;
+            font-size: 2.5rem;
+        }
+    }
+
+    // Footer Section
+    .footer {
+        text-align: left;
+
+        &-container {
+            width: 85%;
+            margin: 0 auto;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        &__logo {
+            order: 0;
+        }
+    }
+
+    // components
+    .upArrow-appear {
+        display: block;
+    }
+
+    .box {
+        width: 200px;
+    }
+
+    .moon,
+    .sun {
+        left: 2em;
+        font-size: 1.5rem;
+    }
+}
+
+@include mobile-only {
+    .cursor {
+        visibility: hidden;
+        display: none;
+    }
+}

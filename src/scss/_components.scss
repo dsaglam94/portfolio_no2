@@ -1,0 +1,153 @@
+// SCROLL DOWN CIRCLE STYLE
+.circle-text {
+    bottom: 30px;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 1s ease;
+
+    & .text {
+        color: $clr__primary-dark;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: rotateText 20s linear infinite;
+
+        @keyframes rotateText {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    
+        & span {
+            text-transform: uppercase;
+            position: absolute;
+            left: 50%;
+            font-size: .5rem;
+            font-weight: bold;
+            transform-origin: 0 45px;
+        }
+    }
+}
+
+.circle-dissappear {
+    opacity: 0;
+}
+
+// CURSOR STYLE
+.cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+    transition-property: background, transform; 
+    z-index: 5;
+
+    &.cursor-dark {
+        border: 1px solid #fff;
+    }
+
+}
+
+.cursor-grow {
+    background-color: #fff;
+    border: none;
+    mix-blend-mode: difference;
+    transform: scale(6);
+
+}
+
+.cursor-grow--second {
+    background-color: #fff;
+    border: none;
+    mix-blend-mode: difference;
+    transform: scale(3);
+
+}
+
+// heading box for layer
+
+.box {
+    position: absolute;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    width: 120px;
+    height: 300px;
+    background-color: $clr__primary-white;
+    z-index: 2;
+    transition: background .5s ease;
+    margin-bottom: 2em;
+}
+// theme changer
+.theme {
+    position: absolute;
+    bottom: 90px;
+    left: 1em;
+    transition: transform, opacity, 1s ease;
+    opacity: 1;
+}
+
+.moon,
+.sun {
+    position: absolute;
+    border: 0;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+}
+
+.moon {
+    color: $clr__primary-dark;
+    opacity: 1;
+}
+
+.sun {
+    color: $clr__primary-white;
+    opacity: 0;
+}
+
+.theme-dissappear {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+// ACTIVE LINK FOR NAVLINKS
+.active-link {
+    -webkit-text-stroke: 2px red;
+}
+
+// Works 
+
+.works-divider {
+    height: 3px;
+    width: 50px;
+    background-color: $clr__primary-dark;
+    margin-bottom: 3em;
+}
+
+// Navigation up-arrow
+
+.up-arrow {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 35px;
+}
+
+.up-arrow-dark {
+    filter: brightness(0) invert(1)
+}

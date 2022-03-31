@@ -1,0 +1,62 @@
+.menu-container {
+    min-width: 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    top: 3em;
+    right: 2em;
+    
+    .menu-text {
+        font-size: .7rem;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: .5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+
+        & span {
+            position: absolute;
+            background: $clr__primary-dark;
+            width: 25px;
+            height: 3px;
+            border-radius: 1rem;
+            transition: all .9s ease;
+
+        }
+
+        & span:nth-child(1) {
+            transform: translateY(-6px);
+            width: 10px;
+            right: 7.5px;
+        }
+
+        & span:nth-child(2) {
+            transform: translateY(6px);
+            width: 15px;
+            right: 7.5px;
+        }
+
+        &.active span:nth-child(1) {
+            transform: translateY(0) rotate(-315deg);
+            width: 25px;
+            transition-delay: .2s;
+        }
+
+        &.active span:nth-child(2) {
+            transform: translateY(0px) rotate(315deg);
+            width: 25px;
+        }
+
+        &.active span:nth-child(3) {
+            transform: translateX(100px);
+        }
+    }
+}

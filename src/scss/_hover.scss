@@ -1,0 +1,21 @@
+@include hover-desktop {
+    .main__social--links a:hover > * {
+        transform: translateY(-5px);
+        transition: transform .5s cubic-bezier(.45,-0.11,.21,2);
+    }
+
+    .works__bottom-text:hover {
+        color: $clr__primary-dark;
+        -webkit-text-stroke: 0px $clr__primary-dark;
+    }
+
+    .works__item:hover > .works__item--icons {
+        opacity: 1;
+    }
+
+    .works-dark .works__bottom-text:hover {
+        color: $clr__primary-white;
+        -webkit-text-stroke: 0px;
+    }
+
+}

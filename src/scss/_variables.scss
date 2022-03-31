@@ -1,0 +1,10 @@
+$clr__primary-dark: #000;
+$clr__primary-white: #fff;
+$clr__secondary-cyan: #00C9C8;
+
+.dark-theme {
+    $clr__primary-dark: #fff;
+    $clr__primary-white: #000;  
+}
+
+$ff__body: 'Poppins', sans-serif;

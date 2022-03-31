@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+@mixin media-md {
+    @media (min-width: 810px) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media (pointer: coarse) {
+        @content;
+    }
+}
+
+@mixin hover-desktop {
+    @media (hover: hover) and (pointer: fine) {
+        @content;
+    }
+}

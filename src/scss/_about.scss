@@ -1,0 +1,111 @@
+.about {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $clr__primary-white;
+    transition: background, color, .5s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    &.about-dark {
+        background-color: $clr__primary-dark;
+    }
+
+    &.about-dark .about__title--back {
+        color: $clr__primary-white;
+    }
+
+    &.about-dark .about__title--front {
+        -webkit-text-stroke: 2px $clr__primary-white;
+    }
+
+    &.about-dark p,
+    &.about-dark .about--button a, 
+    &.about-dark .about--button i {
+        color: $clr__primary-white;
+        opacity: .9;
+    }
+
+
+    &__image--container {
+        width: 500px;
+        max-width: 90%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover > .about__image {
+            filter: grayscale(0);
+        }
+    }
+
+    &__image {
+        position: relative;
+        filter: grayscale(100);
+        z-index: 2;
+        transition: filter .5s ease-in-out;
+    }
+
+    &__title--back,
+    &__title--front {
+        position: absolute;
+        bottom: -10px;
+        font-size: 4.5rem;
+        font-weight: 900;
+    }
+
+    &__title--back {
+        color: $clr__primary-dark;
+        z-index: 1;
+    }
+
+    &__title--front {
+        color: transparent;
+        -webkit-text-stroke: 2px $clr__primary-dark;
+        z-index: 3;
+    }
+
+    &__text--container {
+        max-width: 100%;
+        width: 500px;
+        padding-inline: 2em;
+        display: flex;
+        flex-direction: column;
+
+        & > p {
+            font-size: .9rem;
+            margin-top: 2em;
+            font-weight: 400;
+        }
+
+        .about--button {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8em;
+            margin-top: 4em;
+
+            & a {
+                color: $clr__primary-dark;
+                font-size: .8rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                cursor: none;
+                position: relative;
+                margin-right: 3em;
+            }
+
+            & i {
+                animation: leftpointer 2s linear infinite;
+
+                @keyframes leftpointer {
+                    0% {transform: translateX(0);}
+                    50% {transform: translateX(-20px);}
+                    // 100% {transform: translateX(0);}
+                }
+            }
+        }
+    }
+}

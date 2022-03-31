@@ -1,0 +1,15 @@
+{
+  "name": "portfolio.no2",
+  "version": "1.0.0",
+  "description": "My second portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dogan Saglam (Dawn)",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.49.10"
+  }
+}
