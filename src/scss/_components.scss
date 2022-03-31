@@ -137,9 +137,10 @@
 // Works 
 
 .works-divider {
-    height: 3px;
-    width: 50px;
+    height: 2px;
+    width: 70px;
     background-color: var(--clr-secondary);
+    border-radius: 5px;
     margin-bottom: 3em;
 }
 
@@ -148,9 +149,9 @@
 .up-arrow {
     display: none;
     position: fixed;
-    bottom: 30px;
+    bottom: 50px;
     right: 30px;
-    width: 35px;
+    width: 30px;
 }
 
 .up-arrow-dark {

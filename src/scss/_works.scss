@@ -95,7 +95,7 @@
                 font-weight: 500;
                 letter-spacing: 1px;
                 text-decoration: none;
-                color: var(--clr-secondary);
+                color: var(--clr-perm-dark);
                 cursor: none;
             }
         }
@@ -123,10 +123,14 @@
 
         &::before {
             left: -13px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
         }
 
         &::after {
             right: -32px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
     }
 
