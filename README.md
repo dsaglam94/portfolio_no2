@@ -4,6 +4,11 @@
 - The design style is inspired by another portfolio I've come across.
 - Normally I wasn't gonna make the source code public but I want to hear opinions and recommendations to improve my skills and refactor my code if it's necessary.
 
+>Feel free to use any of the codes in this project.
+
+> If you create your own custom cursor and get give it some behavior like I did. It becomes a real pain for mobile devices. So:
+- Create a media query with `(pointer:coarse)` and make the custom cursor invisible from the mobile user only not to distrup.
+
 
 >Tech stack used in this project:
 
