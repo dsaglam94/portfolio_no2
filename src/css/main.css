@@ -224,6 +224,7 @@
   transition: transform, opacity, 1s ease;
   padding: 1em;
   opacity: 1;
+  cursor: none;
 }
 .theme:focus {
   outline: 1px solid var(--clr-secondary);
