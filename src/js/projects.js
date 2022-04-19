@@ -56,7 +56,21 @@ upArrow.addEventListener('mouseover', () => {
 upArrow.addEventListener('mouseleave', () => {
     mouseCursor.classList.remove('cursor-grow--second');
 })
+// Header disappear / appear
+window.addEventListener('scroll', function() {
+    let lastScrollTop = 0;
+    let header = document.querySelector('.header');
+    let screenSize = window.innerWidth;
 
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if(scrollTop > lastScrollTop && screenSize > 810) {
+        if (!navList.classList.contains('list-open')) {
+            header.style.transform = `translateY(-100px)`
+        }
+    } else if (!(scrollTop > lastScrollTop)){
+        header.style.transform = `translateY(0)`
+    }
+})
 
 // CHANGE THE THEME WHEN CLICKED BUTTONS SUN & MOON
 // Local storage for dark theme
@@ -64,21 +78,25 @@ let darkMode = localStorage.getItem('dark-mode');
 const themeBtn = document.querySelector('.theme');
 
 const enableDarkMode = () => {
+
     let upArrow = document.querySelector('.up-arrow');
 
     document.body.classList.add('dark-mode');
     localStorage.setItem('dark-mode', 'enabled');
 
-    upArrow.classList.add('up-arrow-dark');
+    upArrow.classList.add('up-arrow-dark'); 
+
 }
 
 const disableDarkMode = () => {
+
     let upArrow = document.querySelector('.up-arrow');
 
     document.body.classList.remove('dark-mode');
     localStorage.setItem('dark-mode', null);
     
     upArrow.classList.remove('up-arrow-dark');
+ 
 }
 
 if ( darkMode === 'enabled') {

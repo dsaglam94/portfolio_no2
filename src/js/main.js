@@ -50,6 +50,7 @@ text.innerHTML = text.innerText.split("").map(
 
 // make the SCROLLDOWN disappear/appear from DOM when scroll down/up
 function scrollDownDisappear() {
+    
     let circleText = document.querySelector('.circle-text');
     let socialLinks = document.querySelector('.main__social--links');
     let themeButtonsContainer = document.querySelector('.theme');
