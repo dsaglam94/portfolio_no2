@@ -14,6 +14,7 @@ const upArrow = document.querySelector('.up-arrow');
 const worksBottomText = document.querySelector('.works__bottom-text');
 const footerMail = document.querySelector('.footer__left--mail');
 const footerSocials = document.querySelectorAll('.footer__right--socials a');
+const ctaBtn = document.querySelector('.btn');
 
 // ===================================
 // ===================================
@@ -142,6 +143,14 @@ Array.from(footerSocials).forEach(link => {
     link.addEventListener('mouseleave', () => {
         mouseCursor.classList.remove('cursor-grow--second');
     })
+})
+
+ctaBtn.addEventListener('mouseover', () => {
+    mouseCursor.classList.add('cursor-grow');
+})
+
+ctaBtn.addEventListener('mouseleave', () => {
+    mouseCursor.classList.remove('cursor-grow');
 })
 
 footerMail.addEventListener('mouseover', () => {

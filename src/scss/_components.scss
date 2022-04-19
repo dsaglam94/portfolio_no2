@@ -158,3 +158,17 @@
 .up-arrow-dark {
     filter: brightness(0) invert(1)
 }
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    position: absolute;
+    bottom: 35%;
+    z-index: 2;
+    padding: .2em 1.5em;
+    color: var(--clr-secondary);
+    border: 2px solid var(--clr-secondary);
+}
