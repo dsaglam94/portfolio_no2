@@ -67,7 +67,7 @@
     background-color: var(--clr-cursor-bg);
     border: none;
     mix-blend-mode: difference;
-    transform: scale(6);
+    transform: scale(5);
 
 }
 
@@ -170,5 +170,5 @@
     z-index: 2;
     padding: .2em 1.5em;
     color: var(--clr-secondary);
-    border: 2px solid var(--clr-secondary);
+    border: 1px solid var(--clr-secondary);
 }
