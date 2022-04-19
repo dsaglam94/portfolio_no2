@@ -171,11 +171,11 @@ menuContainer.addEventListener('mouseleave', () => {
 })
 
 worksBottomText.addEventListener('mouseover', () => {
-    mouseCursor.classList.add('cursor-grow--second');
+    mouseCursor.classList.add('cursor-grow');
 })
 
 worksBottomText.addEventListener('mouseleave', () => {
-    mouseCursor.classList.remove('cursor-grow--second');
+    mouseCursor.classList.remove('cursor-grow');
 })
 
 upArrow.addEventListener('mouseover', () => {
