@@ -31,6 +31,10 @@
             right: 3em;
             bottom: 45px;
         }
+
+        .btn {
+            font-size: 1.3rem;
+        }
     }
 
     // About Section
@@ -129,6 +133,8 @@
         // left: 2em;
         font-size: 1.5rem;
     }
+
+    
 }
 
 @include mobile-only {
