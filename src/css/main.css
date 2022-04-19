@@ -288,7 +288,7 @@
   text-transform: uppercase;
   font-weight: bolder;
   letter-spacing: 1px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   position: absolute;
   bottom: 35%;
   z-index: 2;
@@ -704,6 +704,29 @@ a {
   transform: translateY(100px);
 }
 
+.main .projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .projects-container .projects-title {
+  font-size: 1.7rem;
+  margin-top: 7rem;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.main .projects-container .projects-title::after {
+  content: "";
+  width: 40%;
+  height: 4px;
+  background-color: var(--clr-secondary);
+  position: absolute;
+  bottom: -15px;
+  border-radius: 1rem;
+}
+
 @media (min-width: 810px) {
   .header .nav__logo {
     left: 4em;
@@ -725,7 +748,11 @@ a {
     bottom: 45px;
   }
   .main .btn {
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+
+  .main .projects-container .projects-title {
+    font-size: 2.5rem;
   }
 
   .about {

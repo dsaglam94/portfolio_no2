@@ -1,0 +1,25 @@
+.main .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    & .projects-title {
+        font-size: 1.7rem;
+        margin-top: 7rem;
+        position: relative;
+        display: grid;
+        place-items: center;
+
+        &::after {
+            content: '';
+            width: 40%;
+            height: 4px;
+            background-color: var(--clr-secondary);
+            position: absolute;
+            bottom: -15px;
+            border-radius: 1rem;
+        }
+    }
+
+}

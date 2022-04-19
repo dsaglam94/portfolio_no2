@@ -33,8 +33,16 @@
         }
 
         .btn {
-            font-size: 1.3rem;
+            font-size: 1rem;
         }
+    }
+
+    .main .projects-container {
+    
+        & .projects-title {
+            font-size: 2.5rem;
+        }
+    
     }
 
     // About Section
